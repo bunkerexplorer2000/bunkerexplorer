@@ -52,7 +52,8 @@ a{
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: red;
+    background-color: #383838;
+    border-top: 2px solid black;
     color: white;
     text-align: center;
   }
