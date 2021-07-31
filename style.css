@@ -56,4 +56,6 @@ a{
     border-top: 2px solid black;
     color: white;
     text-align: center;
+    padding: .2%;
+    margin: -8px;
   }
