@@ -1,0 +1,43 @@
+body{
+    background-color: rgb(41, 37, 37)
+}
+
+h1{
+    font-family: sans-serif;
+    color: white;
+    text-shadow: 2px 2px red;
+}
+
+p{
+    font-family: sans-serif;
+    color: white;
+}
+
+.header{
+    position: fixed;
+    padding: 5px;
+    text-align: center;
+    background: rgb(46, 42, 42);
+    color: white;
+    font-size: 125%;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+    margin: -10 auto;
+}
+
+.footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(46, 42, 42);
+    color: white;
+    text-align: center;
+}
+
+.content{
+    text-align: center;
+    
+}
