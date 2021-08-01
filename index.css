@@ -67,3 +67,38 @@ p{
     color: white;
     text-align: center;
   }
+
+/* important stuff for rows and columns and putting stuff in order below */
+
+  .row {
+    display: flex;
+  }
+  
+  .column {
+    flex: 33.33%;
+    padding: 5px;
+  }
+
+
+
+/* SCROLL BAR BELOW  */
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #242424; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #853939; 
+    border-radius: 5px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #700000; 
+  }
