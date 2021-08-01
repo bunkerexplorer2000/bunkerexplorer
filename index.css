@@ -49,6 +49,12 @@ a:hover{
     color: red;
 }
 
+.logo{
+  position: absolute;
+  margin-top: 19px;
+  margin-left: 6px;
+}
+
 /* the other pages css (study what ever is above since i dont understand it) */
 
 
