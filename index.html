@@ -24,19 +24,23 @@
         
         <div class="sectionLeft">
             <center>
-                <div class="scoreContainer">
+                <div class="scoreContainer unselectable">
                     <p>🍃 Nutrients: <span id="nutrients">0</span></p>
                     <p>🐜 Ant Income: <span id="nutrientsper">0</span></p>
                 </div>
                 <br>
-                <div class="clickerContainer">
+                <div class="clickerContainer unselectable">
                     <img src="assets/images/ant.png" style="width: 256; height: 256;" onclick="addToNutrients(clickingPower)">
                 </div>
             </center>
+
+            <div class="sectionFooter">
+                <h5>Ant Clicker - Bunker explorer 2000#7500 on Discord</h5>
+            </div>
         </div>
 
         <div class="sectionRight">
-            <table class="shopButton" onclick="buyMiWorker()">
+            <table class="shopButton unselectable" onclick="buyMiWorker()">
                 <tr>
                     <td id="image"><img src="assets/images/minor.png"></td>
                     <td id="nameAndCost">
@@ -46,7 +50,7 @@
                     <td id="amount"><span id="miworkers">0</span></td>
                 </tr>
             </table>
-            <table class="shopButton" onclick="buyMaWorker()">
+            <table class="shopButton unselectable" onclick="buyMaWorker()">
                 <tr>
                     <td id="image"><img src="assets/images/major.png"></td>
                     <td id="nameAndCost">
@@ -55,7 +59,7 @@
                     </td>
                     <td id="amount"><span id="maworkers">0</span></td>
                 </tr>
-            </table><table class="shopButton" onclick="buySoldier()">
+            </table><table class="shopButton unselectable" onclick="buySoldier()">
                 <tr>
                     <td id="image"><img src="assets/images/soldier.png"></td>
                     <td id="nameAndCost">
