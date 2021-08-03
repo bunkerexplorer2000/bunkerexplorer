@@ -4,21 +4,73 @@
         
         <link rel="stylesheet" href="index.css">
 
+        <link rel="" href="index.css">
+
         <meta charset="UTF-8">
 
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
         <link rel="icon" href="assets/images/icon.ico">
 
-        <title>Bunker Explorer</title>
+        <title>Bunker Clicker</title>
 
     </head>
 
     <body>
 
-        <h1>momentarily empty</h1>
+        <!-- <h1>momentarily empty</h1>
         <img src="assets/images/cat.gif">
-        <h1 style="margin-top: 1.3%;">loading content</h1>
+        <h1 style="margin-top: 1.3%;">loading content</h1> -->
+
+        <p>🍃 Nutrients: <span id="score">0</span></p>
+        <img src="assets/images/ant.png" style="width: 256; height: 256;" onclick="addToScore(1)">
+
+        <button onclick="buyWorker()">Worker [🍃<span id="workercost">15</span>] -- <span id="workers">0</span></button>
+        <button onclick="buySoldier()">Soldier [🍃<span id="soldiercost">100</span>] -- <span id="soldiers">0</span></button>
+
+        <script>
+            var score = 0;
+
+            var workercost = 15;
+            var workers = 0;
+            var soldiercost = 100;
+            var soldiers = 0;
+
+            function buyWorker(){
+                if (score >= workercost) {
+                    score = score - workercost;
+                    workers = workers + 1;
+                    workercost = Math.round(workercost * 1.15);
+
+                    document.getElementById("score").innerHTML = score;
+                    document.getElementById("workercost").innerHTML = workercost;
+                    document.getElementById("workers").innerHTML = workers;
+                }
+            }
+
+            function buySoldier(){
+                if (score >= soldiercost) {
+                    score = score - soldiercost;
+                    soldiers = soldiers + 1;
+                    soldiercost = Math.round(soldiercost * 1.50);
+
+                    document.getElementById("score").innerHTML = score;
+                    document.getElementById("soldiercost").innerHTML = soldiercost;
+                    document.getElementById("soldiers").innerHTML = soldiers;
+                }
+            }
+
+            function addToScore(amount) {
+                score = score + amount;
+                document.getElementById("score").innerHTML = score;
+            }
+
+            setInterval(function() {
+                score = score + workers;
+                score = score + soldiers * 2;
+                document.getElementById("score").innerHTML = score;
+            }, 1000); //1000 ms = 1 second
+        </script>
 
     </body>
 
