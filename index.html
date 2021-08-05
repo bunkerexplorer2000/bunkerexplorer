@@ -45,7 +45,7 @@
                     <td id="image"><img src="assets/images/minor.png"></td>
                     <td id="nameAndCost">
                         <p>Minor Worker</p>
-                        <p>🍃<span id="miworkercost">50</span></p>
+                        <p>🍃<span id="miworkercost">15</span></p>
                     </td>
                     <td id="amount"><span id="miworkers">0</span></td>
                 </tr>
@@ -55,7 +55,7 @@
                     <td id="image"><img src="assets/images/major.png"></td>
                     <td id="nameAndCost">
                         <p>Major Worker</p>
-                        <p>🍃<span id="maworkercost">500</span></p>
+                        <p>🍃<span id="maworkercost">100</span></p>
                     </td>
                     <td id="amount"><span id="maworkers">0</span></td>
                 </tr>
@@ -64,7 +64,7 @@
                     <td id="image"><img src="assets/images/soldier.png"></td>
                     <td id="nameAndCost">
                         <p>Soldier</p>
-                        <p>🍃<span id="soldiercost">1000</span></p>
+                        <p>🍃<span id="soldiercost">500</span></p>
                     </td>
                     <td id="amount"><span id="soldiers">0</span></td>
                 </tr>
@@ -77,13 +77,13 @@
 
             var clickingPower = 1;
 
-            var miworkercost = 50;
+            var miworkercost = 15;
             var miworkerincome = 0;
             var miworkers = 0;
-            var maworkercost = 500;
+            var maworkercost = 100;
             var maworkerincome = 0;
             var maworkers = 0;
-            var soldiercost = 1000;
+            var soldiercost = 500;
             var soldierincome = 0;
             var soldiers = 0;
 
@@ -92,7 +92,7 @@
                     nutrients = nutrients - miworkercost;
                     miworkers = miworkers + 1;
                     miworkercost = Math.round(miworkercost * 1.15);
-                    miworkerincome = Math.round(miworkers * 2);
+                    miworkerincome = Math.round(miworkers * 1.15 * 1.15);
 
                     document.getElementById("nutrients").innerHTML = nutrients;
                     document.getElementById("miworkercost").innerHTML = miworkercost;
@@ -105,7 +105,7 @@
                     nutrients = nutrients - maworkercost;
                     maworkers = maworkers + 1;
                     maworkercost = Math.round(maworkercost * 1.50);
-                    maworkerincome = Math.round(maworkers * 3);
+                    maworkerincome = Math.round(maworkers * 1.50 * 1.50);
 
                     document.getElementById("nutrients").innerHTML = nutrients;
                     document.getElementById("maworkercost").innerHTML = maworkercost;
@@ -118,7 +118,7 @@
                     nutrients = nutrients - soldiercost;
                     soldiers = soldiers + 1;
                     soldiercost = Math.round(soldiercost * 1.75);
-                    soldierincome = Math.round(soldiers * 5);
+                    soldierincome = Math.round(soldiers * 1.75 * 1.75);
 
                     document.getElementById("nutrients").innerHTML = nutrients;
                     document.getElementById("soldiercost").innerHTML = soldiercost;
