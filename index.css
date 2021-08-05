@@ -1,7 +1,7 @@
 /* h1{
-  text-align: center;
-  margin-top: 10%;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      text-align: center;
+      margin-top: 10%;
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 img{
@@ -9,6 +9,15 @@ img{
   margin-left: auto;
   margin-right: auto;
 } */
+
+.not404{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 body{
   background-color: rgb(238, 238, 238, 0.1);;
