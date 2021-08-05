@@ -12,7 +12,7 @@
 
         <link rel="icon" href="assets/images/icon.ico">
 
-        <title>Bunker Clicker</title>
+        <title>Ant Clicker</title>
 
     </head>
 
@@ -35,7 +35,9 @@
             </center>
 
             <div class="sectionFooter">
-                <h5>Ant Clicker - Bunker explorer 2000#7500 on Discord</h5>
+                <h5>Ant Clicker | Bunker explorer 2000#7500 on Discord</h5>
+                <h5>Auto saves every 30 seconds | Ctrl + S to manually save</h5>
+                <button onclick="resetGame();">Reset Game</button>
             </div>
         </div>
 
@@ -78,13 +80,10 @@
             var clickingPower = 1;
 
             var miworkercost = 15;
-            var miworkerincome = 0;
             var miworkers = 0;
             var maworkercost = 100;
-            var maworkerincome = 0;
             var maworkers = 0;
             var soldiercost = 500;
-            var soldierincome = 0;
             var soldiers = 0;
 
             function buyMiWorker(){
@@ -92,7 +91,6 @@
                     nutrients = nutrients - miworkercost;
                     miworkers = miworkers + 1;
                     miworkercost = Math.round(miworkercost * 1.15);
-                    miworkerincome = Math.round(miworkers * 1.15 * 1.15);
 
                     document.getElementById("nutrients").innerHTML = nutrients;
                     document.getElementById("miworkercost").innerHTML = miworkercost;
@@ -105,7 +103,6 @@
                     nutrients = nutrients - maworkercost;
                     maworkers = maworkers + 1;
                     maworkercost = Math.round(maworkercost * 1.50);
-                    maworkerincome = Math.round(maworkers * 1.50 * 1.50);
 
                     document.getElementById("nutrients").innerHTML = nutrients;
                     document.getElementById("maworkercost").innerHTML = maworkercost;
@@ -118,7 +115,6 @@
                     nutrients = nutrients - soldiercost;
                     soldiers = soldiers + 1;
                     soldiercost = Math.round(soldiercost * 1.75);
-                    soldierincome = Math.round(soldiers * 1.75 * 1.75);
 
                     document.getElementById("nutrients").innerHTML = nutrients;
                     document.getElementById("soldiercost").innerHTML = soldiercost;
@@ -131,14 +127,73 @@
                 document.getElementById("nutrients").innerHTML = nutrients;
             }
 
-            setInterval(function() {
-                nutrients = nutrients + miworkerincome;
-                nutrients = nutrients + maworkerincome;
-                nutrients = nutrients + soldierincome;
-                nutrientsper = miworkerincome + maworkerincome + soldierincome; // all the intervals combined to say what ur score per second is! //
+            function loadGame() {
+                var savedGame = JSON.parse(localStorage.getItem("gameSave"));
+                if (typeof savedGame.nutrients !== "undefined") nutrients = savedGame.nutrients;
+                if (typeof savedGame.clickingPower !== "undefined") clickingPower = savedGame.clickingPower;
+                if (typeof savedGame.miworkercost !== "undefined") miworkercost = savedGame.miworkercost;
+                if (typeof savedGame.miworkers !== "undefined") miworkers = savedGame.miworkers;
+                if (typeof savedGame.maworkercost !== "undefined") maworkercost = savedGame.maworkercost;
+                if (typeof savedGame.maworkers !== "undefined") maworkers = savedGame.maworkers;
+                if (typeof savedGame.soldiercost !== "undefined") soldiercost = savedGame.soldiercost;
+                if (typeof savedGame.soldiers !== "undefined") soldiers = savedGame.soldiers;
+            }
+
+            function saveGame() {
+                var gameSave = {
+                    nutrients: nutrients,
+                    clickingPower: clickingPower,
+                    miworkercost: miworkercost,
+                    miworkers: miworkers,
+                    maworkercost: maworkercost,
+                    maworkers: maworkers,
+                    soldiercost: soldiercost,
+                    soldiers: soldiers
+                };
+                localStorage.setItem("gameSave", JSON.stringify(gameSave));
+            }
+
+            function resetGame() {
+                if (confirm("Are you sure you want to reset your game?")) {
+                    var gameSave = {};
+                    localStorage.setItem("gameSave", JSON.stringify(gameSave));
+                    location.reload();
+                }
+            }
+
+            window.onload = function() {
+                loadGame();
                 document.getElementById("nutrients").innerHTML = nutrients;
                 document.getElementById("nutrientsper").innerHTML = nutrientsper;
+                document.getElementById("miworkercost").innerHTML = miworkercost;
+                document.getElementById("miworkers").innerHTML = miworkers;
+                document.getElementById("maworkercost").innerHTML = maworkercost;
+                document.getElementById("maworkers").innerHTML = maworkers;
+                document.getElementById("soldiercost").innerHTML = soldiercost;
+                document.getElementById("soldiers").innerHTML = soldiers;
+            };
+
+            setInterval(function() {
+                nutrients = nutrients + miworkers;
+                nutrients = nutrients + maworkers * 5;
+                nutrients = nutrients + soldiers * 70;
+                nutrientsper = miworkers + maworkers * 5 + soldiers * 70; // all the intervals combined to say what ur score per second is! //
+                document.getElementById("nutrients").innerHTML = nutrients;
+                document.getElementById("nutrientsper").innerHTML = nutrientsper;
+            
+                document.title = nutrients + " Nutrients - Ant Clicker";
             }, 1000); //1000 ms = 1 second
+
+            setInterval(function(){
+                saveGame();
+            }, 30000); //30000ms = 30seconds //
+
+            document.addEventListener("keydown", function(event) {
+                if (event.ctrlKey && event.which == 83) { //ctrl + s
+                    event.preventDefault();
+                    saveGame();
+                }
+            }, false);
         </script>
 
     </body>
