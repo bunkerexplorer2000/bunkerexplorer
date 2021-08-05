@@ -1,19 +1,10 @@
-/* h1{
-      text-align: center;
-      margin-top: 10%;
-      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+.text404{
+  text-align: center;
+  margin-top: 10%;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-img{
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-} */
-
-.not404{
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+.img404{
   display: block;
   margin-left: auto;
   margin-right: auto;
