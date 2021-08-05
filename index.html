@@ -92,7 +92,7 @@
                     nutrients = nutrients - miworkercost;
                     miworkers = miworkers + 1;
                     miworkercost = Math.round(miworkercost * 1.15);
-                    miworkerincome = Math.round(miworkers * 1.15);
+                    miworkerincome = Math.round(miworkers * 1.15 * 1.15);
 
                     document.getElementById("nutrients").innerHTML = nutrients;
                     document.getElementById("miworkercost").innerHTML = miworkercost;
@@ -105,7 +105,7 @@
                     nutrients = nutrients - maworkercost;
                     maworkers = maworkers + 1;
                     maworkercost = Math.round(maworkercost * 1.50);
-                    maworkerincome = Math.round(maworkers * 1.50);
+                    maworkerincome = Math.round(maworkers * 1.50 * 1.50);
 
                     document.getElementById("nutrients").innerHTML = nutrients;
                     document.getElementById("maworkercost").innerHTML = maworkercost;
@@ -118,7 +118,7 @@
                     nutrients = nutrients - soldiercost;
                     soldiers = soldiers + 1;
                     soldiercost = Math.round(soldiercost * 1.75);
-                    soldierincome = Math.round(soldiers * 1.75);
+                    soldierincome = Math.round(soldiers * 1.75 * 1.75);
 
                     document.getElementById("nutrients").innerHTML = nutrients;
                     document.getElementById("soldiercost").innerHTML = soldiercost;
