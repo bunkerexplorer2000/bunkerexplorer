@@ -6,7 +6,7 @@
 </head>
 
 <body>
-	<h1 style="text-align: center; padding: 20%; font-family: var(--font-var);"><span id="time">0</span><h1>
+	<h1 style="text-align: center; padding: 20%; font-family: var(--font-var); color: var(--color-var);"><span id="time">0</span><h1>
 </body>
 
 <script>
@@ -25,6 +25,10 @@
 				if(time === 60){
 					r.style.setProperty("--font-var", "arial");
 					alert("Achievement Get: 60 seconds stolen from your life. Unlocked: Arial font.");
+				}
+				if(time === 600){
+					r.style.setProperty("--color-var", "red");
+					alert("Achievement Get: Just the beginning... Unlocked: Red font color.");
 				}
 			};
 		
