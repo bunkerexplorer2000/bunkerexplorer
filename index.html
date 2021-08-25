@@ -2,16 +2,50 @@
 <html>
 
 <head>
-<title>wait</title>
+
+	<link rel="stylesheet" href="index.css">
+
+	<title>wait</title>
 </head>
 
 <body>
+
 	<h1 style="text-align: center; padding: 20%; font-family: var(--font-var); color: var(--color-var);"><span id="time">0</span><h1>
+
+	<div class="fontoptions">
+		<table>
+			<tr>
+				<button onclick=TimesNewRomanChangeTO()>Times New Roman (Default) ✅</button>
+			</tr>
+		</table>
+		<table>
+			<tr>
+				<button onclick=ArialChangeTO()><span id="ArialButton">Arial (60 seconds) ❌</span></button>
+			</tr>
+		</table>
+	</div>
+
+	<div class="coloroptions">
+		<table>
+			<tr>
+				<button onclick=BlackFontColorChangeTO()>Black Font Color (Default) ✅</button>
+			</tr>
+		</table>
+		<table>
+			<tr>
+				<button onclick=RedFontColorChangeTO()><span id="RedButton">Red Font Color (600 seconds) ❌</span></button>
+			</tr>
+		</table>
+	</div>
+
 </body>
 
 <script>
 
-			var time = 0;
+			var time = 0
+
+			var ArialButton = "Arial (60 seconds) ❌"
+			var RedButton = "Red Font Color (600 seconds) ❌"
 			
 			var r = document.querySelector('h1');
 
@@ -24,15 +58,46 @@
 			function updatestyle(){
 				if(time === 60){
 					r.style.setProperty("--font-var", "arial");
+					ArialButton = "Arial (60 seconds) ✅"
 					alert("Achievement Get: 60 seconds stolen from your life. Unlocked: Arial font.");
+					document.getElementById("ArialButton").innerHTML = ArialButton;  
+					document.getElementById("time").innerHTML = time;  
 				}
 				if(time === 600){
 					r.style.setProperty("--color-var", "red");
+					RedButton = "Red Font Color (600 seconds) ✅"
 					alert("Achievement Get: Just the beginning... Unlocked: Red font color.");
+					document.getElementById("RedButton").innerHTML = RedButton; 
+					document.getElementById("time").innerHTML = time;
 				}
 			};
+
+			// OPTIONS BELOW //
+
+			function TimesNewRomanChangeTO(){
+				r.style.setProperty("--font-var", "Times New Roman");
+			}
+
+			function ArialChangeTO(){
+				if(time >= 60){
+					r.style.setProperty("--font-var", "arial");
+				}
+			}
+
+			function BlackFontColorChangeTO(){
+				r.style.setProperty("--color-var", "black");
+			}
+
+			function RedFontColorChangeTO(){
+				if(time >= 600){
+					r.style.setProperty("--color-var", "red");
+				}
+			}
+		
 		
 			
 </script>
+
+<footer style="font-size: 50%;">600 seconds is highest Achievement as of now.</footer>
 
 </html>
