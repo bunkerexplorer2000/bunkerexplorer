@@ -1,3 +1,10 @@
 h1 {
-  margin-top: auto;
+  text-align: center;
+  background-color: black;
+  color: white;
+  border: 10px;
+}
+
+img {
+  text-align: center;
 }
