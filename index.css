@@ -23,6 +23,14 @@ body{
   background-color: #242424;
 }
 
+.footer{
+  margin: auto;
+  padding: 20px;
+  margin-top: 20px;
+  text-align: center;
+  background-color: #242424;
+}
+
 /*make this left/right in the future, but for now main column since theres nothing on the left or right.*/
 
 
