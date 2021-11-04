@@ -1,10 +1,73 @@
-h1 {
-  text-align: center;
-  background-color: black;
+body{
+  padding: 20px;
+  background-color: #2e2e2e;
   color: white;
-  border: 10px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-img {
+.header{
+  margin: auto;
+  padding: 30px;
+  font-size: 30px;
   text-align: center;
+  background-color: #242424;
+  width: 50%;
 }
+
+.box{
+  margin: auto;
+  margin-top: 20px;
+  padding: 20px;
+  float: center;
+  width: 30%;
+  background-color: #242424;
+}
+
+/*make this left/right in the future, but for now main column since theres nothing on the left or right.*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*example css below for a blog - BE YOURSELF DONT TAKE FROM OTHERS (note to self (bunker) (dont be a skid))*/
+
+
+/* body {
+  font-family: Arial;
+  padding: 20px;
+  background: #f1f1f1;
+}
+
+.header {
+  padding: 30px;
+  font-size: 40px;
+  text-align: center;
+  background: white;
+}
+
+.leftcolumn {
+  float: center;
+  width: 75%;
+}
+
+.card {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+} */
