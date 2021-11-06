@@ -7,7 +7,7 @@ body{
 
 .header{
   margin: auto;
-  padding: 30px;
+  padding: 20px;
   font-size: 30px;
   text-align: center;
   background-color: #242424;
@@ -30,6 +30,28 @@ body{
   text-align: center;
   background-color: #242424;
   width: 50%;
+}
+
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  display: inline;
+}
+
+a{
+  color: white;
+}
+
+a:hover{
+  color: red;
+}
+a:active{
+  color: black;
 }
 
 /*make this left/right in the future, but for now main column since theres nothing on the left or right.*/
