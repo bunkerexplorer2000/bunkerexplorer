@@ -23,6 +23,15 @@ body{
   background-color: #242424;
 }
 
+.main_box{
+  margin: auto;
+  margin-top: 20px;
+  padding: 20px;
+  float: center;
+  width: 45%;
+  background-color: #242424;
+}
+
 .footer{
   margin: auto;
   padding: 20px;
@@ -32,11 +41,18 @@ body{
   width: 50%;
 }
 
+/*NAV BAR STUFF BELOW*/
+/*NAV BAR STUFF BELOW*/
+/*NAV BAR STUFF BELOW*/
+
 
 ul {
   list-style-type: none;
-  margin: 0;
-  padding: 0;
+  margin: auto;
+  width: 50%;
+  background-color: #1C1C1C;
+  border-radius: 15px;
+  padding: 10px;
 }
 
 li {
@@ -44,7 +60,18 @@ li {
 }
 
 a{
+  margin: auto;
   color: white;
+  text-decoration: none;
+  
+
+  /*skidded code below*/
+  -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  transition:.5s;
+  /*skidded code above*/
 }
 
 a:hover{
@@ -53,6 +80,14 @@ a:hover{
 a:active{
   color: black;
 }
+
+li a
+
+/*NAV BAR STUFF ABOVE*/
+/*NAV BAR STUFF ABOVE*/
+/*NAV BAR STUFF ABOVE*/
+
+
 
 /*make this left/right in the future, but for now main column since theres nothing on the left or right.*/
 
