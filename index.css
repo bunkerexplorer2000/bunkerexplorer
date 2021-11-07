@@ -49,7 +49,7 @@ body{
 ul {
   list-style-type: none;
   margin: auto;
-  width: 50%;
+  width: 35%;
   background-color: #1C1C1C;
   border-radius: 15px;
   padding: 10px;
@@ -66,11 +66,11 @@ a{
   
 
   /*skidded code below*/
-  -o-transition:.5s;
+  /* -o-transition:.5s;
   -ms-transition:.5s;
   -moz-transition:.5s;
   -webkit-transition:.5s;
-  transition:.5s;
+  transition:.5s; */
   /*skidded code above*/
 }
 
