@@ -9,9 +9,8 @@ header{
 
 .backbtn{
 	float: right;
-	background-color: black;
-	border: none;
-	color: white;
+	border: solid;
+	color: black;
 	padding: 10px 15px;
 	text-align: center;
 	text-decoration: none;
