@@ -17,6 +17,7 @@ header{
 	display: inline-block;
 	margin: 5px;
 	font-size: 16px;
+	border-radius: 25px;
 }
 
 .solidline{
@@ -42,7 +43,7 @@ header{
 	margin-top: 5px;
 	margin-left: 212px;
 	width: 1644px;
-	height: 750px;
+	height: 1350px;
 	
 }
 
@@ -58,6 +59,11 @@ header{
 .linediv{
 	background-color: gray;
 	height: 2px;
+}
+
+.footer{
+	border-style: solid;
+	margin-top: 5px;
 }
 
 
