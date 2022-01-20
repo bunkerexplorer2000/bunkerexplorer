@@ -31,9 +31,19 @@
 			</div>
 		</div>
 
+		<script>
+			var blink_speed = 1000; // 
+			var BLINK = setInterval(function () {
+				var BLINK_1 = document.getElementById('BLINKING_TEXT');
+				BLINK_1.style.visibility = (BLINK_1.style.visibility == 'hidden' ? '' : 'hidden');
+			}, blink_speed);
+		</script>
+
 		<div class="box">
 			<h1>Its been a year</h1>
 			<h3>Jan 19th, 2022 | 8:34pm</h3>
+			<div style="font:Impact, Fantasy;font-size: 40px;color: red; border: black;" id="BLINKING_TEXT">DISCLAIMER</div>
+			<br>
 			<p>It's been a year since my lat post. Since then my s key ha stopped working. It still work obviouly, but ometime it doen't work. You know what I mean? Anyway. Going to be mesing around with this webite ome more.</p>
 		</div>
 		
