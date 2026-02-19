@@ -108,14 +108,6 @@ body{
 }
 
 
-a:link {
-  color: bisque;
-}
-a:hover {
-  color: hotpink;
-}
-
-
 
 
 
@@ -140,17 +132,8 @@ li {
 
 a{
   margin: auto;
-  color: white;
+  color: bisque;
   text-decoration: none;
-  
-
-  /*skidded code below*/
-  /* -o-transition:.5s;
-  -ms-transition:.5s;
-  -moz-transition:.5s;
-  -webkit-transition:.5s;
-  transition:.5s; */
-  /*skidded code above*/
 }
 
 a:hover{
