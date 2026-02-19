@@ -14,7 +14,12 @@ body{
   background-color: #27402D;
   border-radius: 25px;
   width: 35%;
+  animation: slide-in 2s ease;
 }
+
+
+
+
 
 .box{
   margin: auto;
@@ -24,7 +29,10 @@ body{
   background-color: #27402D;
   border-radius: 20px;
   width: 35%;
+  animation: slide-in 2s ease;
 }
+
+
 
 .update_box{
   margin: auto;
@@ -34,6 +42,7 @@ body{
   background-color: #27402D;
   border-radius: 15px;
   width: 30%;
+  animation: slide-in 2s ease;
 }
 
 .footer{
@@ -45,7 +54,25 @@ body{
   border-radius: 25px;
   width: 35%;
   margin-bottom: 10px;
+  animation: slide-in 2s ease;
+  transition: transform .2s ease;
 }
+
+.footer:hover{
+  transform:scale(1.03)
+}
+
+@keyframes slide-in {
+	0% {
+		transform: translateY(-20px);
+		opacity: 0;
+	}
+	100% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
 
 @media (max-width: 600px) {
     .header, .footer, .box, .update_box {
@@ -124,7 +151,12 @@ ul {
   width: 35%;
   background-color: #315C3E;
   padding: 10px;
+  transition: transform .2s ease;
 
+}
+
+ul:hover{
+  transform:scale(1.03)
 }
 
 li {
