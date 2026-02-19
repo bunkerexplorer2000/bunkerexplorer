@@ -33,7 +33,7 @@ body{
   text-align: left;
   background-color: #27402D;
   border-radius: 15px;
-  width: 25%;
+  width: 30%;
 }
 
 .footer{
@@ -45,6 +45,22 @@ body{
   border-radius: 25px;
   width: 35%;
 }
+
+@media (max-width: 600px) {
+    .header, .footer, .box, .update_box {
+        width: 90%; /* Makes elements wider on small screens */
+        padding: 15px; /* Adjust padding */
+    }
+
+    .header img, .box img, .footer img, .update_box img {
+        width: 30%; /* Adjust image size */
+    }
+
+    h1, h2, p {
+        font-size: 1.2em; /* Scale font size for better readability */
+    }
+}
+
 
 #loader{
     border: 15px solid#5EFFB4;
