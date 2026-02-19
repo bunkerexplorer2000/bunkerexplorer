@@ -1,3 +1,7 @@
+html{
+  word-wrap: break-word;
+}
+
 body{
     background-color: #202B26;
 }
@@ -6,7 +10,6 @@ body{
   margin: auto;
   margin-top: 10px;
   padding: 20px;
-  font-size: 20px;
   text-align: center;
   background-color: #27402D;
   border-radius: 25px;
