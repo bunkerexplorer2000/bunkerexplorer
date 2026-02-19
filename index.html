@@ -1,43 +1,39 @@
 <!DOCTYPE html>
 <html>
 
+
 <head>
-
-	<link rel="stylesheet" href="index.css">
-
-	<title>bunkerexplorer's corner of the internet</title>
+    <link rel="stylesheet" href="index.css">
+    <title>bunkerexplorer's corner of the internet</title>
 	
 	<meta content="bunkerexplorer" property="og:title" />
     <meta content="bunkerexplorer's corner of internet!!!" property="og:description" />
     <meta content="https://bunkerexplorer.com/" property="og:url" />
     <meta content="https://cdn.discordapp.com/attachments/872636360358510643/905637837846740992/trollage.jpg" property="og:image" />
     <meta content="#000000" data-react-helmet="true" name="theme-color" />
-	
 </head>
 
-<body>
+<body onload="myFunction()" style="margin:0;">
 
+    <div id="loader"></div>
+
+    <div style="display:none;" id="mainDiv" class="animate-bottom">
         <div class="header">
-            <img src="assets/images/bunker.png" style="width: 10%;">
-            <h3>bunkerexplorer's corner of the internet</h3>
+            <h1>bunkerexplorer.com</h1>
             <div class="nav">
                 <nav>
                     <ul>
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="updates.html">Updates</a></li>
+                        <li><a href="index.html">Updates</a></li>
                     </ul>
                 </nav>
             </div>
         </div>
 
-        <div class="main_box">
-			<h1>Welcome to my webpage!</h1>
-			<h3>This website is currently under renovation!</h3>
-			<img src="assets/images/danielle.jpg" style="width: 50%;">
-			<p> </p>
-		</div>
 
-		<div class="footer">
+
+
+        <div class="footer">
 			<h3><em>Contact: Bunker explorer 2000#7500</em></h3>
 			<div class="links">
 				<a href="https://github.com/bunkerexplorer2000/bunkerexplorer" target="_blank"><img src="assets/images/github.png" style="width: 5%;"></a>
@@ -45,9 +41,24 @@
 				<a href="https://bunkerexplorer.com" target="_blank"><img src="assets/images/bunker.png" style="width: 5%;"></a>
 			</div>		
 		</div>
+    </div>
+
 
 
 </body>
 
-</html>
+<script>
+var myVar;
 
+function myFunction() {
+  myVar = setTimeout(showPage, 3000);
+}
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("mainDiv").style.display = "block";
+}
+</script>
+
+
+</html>
