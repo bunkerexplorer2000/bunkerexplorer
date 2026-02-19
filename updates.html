@@ -13,11 +13,9 @@
     <meta content="#000000" data-react-helmet="true" name="theme-color" />
 </head>
 
-<body onload="myFunction()" style="margin:0;">
+<body style="margin:0;">
 
-    <div id="loader"></div>
-
-    <div style="display:none;" id="mainDiv" class="animate-bottom">
+    <div style="display:block;" id="mainDiv" class="animate-bottom">
         <div class="header">
             <img src="assets/images/bunker.png" style="width: 10%;">
             <h1>bunkerexplorer.com</h1>
@@ -31,13 +29,19 @@
             </div>
         </div>
 
-
-        <div class="box">
-            <h2>Welcome to bunkerexplorer's corner of the internet!</h2>
-            <p>My name is bunkerexplorer and I am an aspiring developer and cybersecurity engineer. Although I don't have any public sucessful projects, overtime this is what I hope to achieve.</p>
-            <p>I will create a roadmap at some point.</p>
-            <a href="updates.html#first-update">Click here to read my first update</a>
+        <div class="update_box" id="first-update">
+            <h1>First Update</h1>
+            <p>Welcome to my website! My name is Bunker and I'll utilize this website to host various projects, post my thoughts in this review feed, and make any changes I feel suitable.</p>
+            <p>I initially allowed this project to die because I didn't know where to take this website. Since I have been and will be studying cybersecurity I decided to buy my domain again for personal projects.</p>
+            <p style="color: #54E89E;"><i>Wednesday, February 18, 2026, 11:07:00 pm</i></p>
         </div>
+
+        <div class="update_box">
+            <h1>Test update</h1>
+            <p>Hello, this is a test update just to fill this screen with content. Lorem ipsum.</p>
+            <p style="color: #54E89E;"><i>Wednesday, February 18, 2026, 10:59:00 pm</i></p>
+        </div>
+
 
         <div class="footer">
 			<h3><em>Contact: Bunker explorer 2000#7500</em></h3>
@@ -52,19 +56,5 @@
 
 
 </body>
-
-<script>
-var myVar;
-
-function myFunction() {
-  myVar = setTimeout(showPage, 500);
-}
-
-function showPage() {
-  document.getElementById("loader").style.display = "none";
-  document.getElementById("mainDiv").style.display = "block";
-}
-</script>
-
 
 </html>

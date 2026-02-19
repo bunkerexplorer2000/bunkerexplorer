@@ -13,6 +13,26 @@ body{
   width: 35%;
 }
 
+.box{
+  margin: auto;
+  padding: 20px;
+  margin-top: 20px;
+  text-align: left;
+  background-color: #27402D;
+  border-radius: 20px;
+  width: 35%;
+}
+
+.update_box{
+  margin: auto;
+  padding: 20px;
+  margin-top: 20px;
+  text-align: left;
+  background-color: #27402D;
+  border-radius: 15px;
+  width: 25%;
+}
+
 .footer{
   margin: auto;
   padding: 20px;
