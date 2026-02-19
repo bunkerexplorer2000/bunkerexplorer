@@ -108,8 +108,12 @@ body{
 }
 
 
-
-
+a:link {
+  color: bisque;
+}
+a:hover {
+  color: hotpink;
+}
 
 
 
