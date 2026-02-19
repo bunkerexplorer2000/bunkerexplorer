@@ -44,6 +44,7 @@ body{
   background-color: #27402D;
   border-radius: 25px;
   width: 35%;
+  margin-bottom: 10px;
 }
 
 @media (max-width: 600px) {
