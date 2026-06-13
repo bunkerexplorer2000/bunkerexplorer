@@ -30,6 +30,35 @@ h2, h3, p{
     color: white;
 }
 
+.drone-info{
+    background: linear-gradient(135deg, #491102, #fc5383);
+    display: flex;
+    align-items: center;
+    margin: auto;
+    padding: 20px;
+    margin-top: 20px;
+    text-align: center;
+    border-radius: 20px;
+    width: 35%;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.drone-info:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(119, 13, 0);
+}
+
+
+.drone-img{
+    width: 250px;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.drone-text{
+    flex: 1;
+}
+
 .section-title {
     text-align: center;
     color: white;
@@ -86,4 +115,29 @@ h2, h3, p{
     .image-card:last-child {
         grid-column: 1;
     }
+}
+
+@media (max-width: 600px) {
+    .drone-info {
+        flex-direction: column;
+    }
+    
+    .drone-img {
+        width: 100%;
+    }
+}
+
+
+.footer{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    background: linear-gradient(135deg, #160f56, #a23aa8);
+    margin: auto;
+    padding: 20px;
+    margin-top: 20px;
+    text-align: center;
+    border-radius: 20px;
+    width: 35%;
+    margin-bottom: 20px;
+
 }
